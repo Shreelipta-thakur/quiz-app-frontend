@@ -1,0 +1,12 @@
+.bankcontainer{
+      
+      width: 80%; 
+      height: 80px;
+      margin: 0 auto; 
+      padding: 20px; 
+      justify-content: center;
+      background-color: #eaebec; 
+      border: 1px solid #f2e8ee; 
+}
+    
+     
