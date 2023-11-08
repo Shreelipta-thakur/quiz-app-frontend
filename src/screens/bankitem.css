@@ -1,12 +1,24 @@
-.bankcontainer{
-      
-      width: 80%; 
-      height: 80px;
-      margin: 0 auto; 
-      padding: 20px; 
-      justify-content: center;
-      background-color: #eaebec; 
-      border: 1px solid #f2e8ee; 
-}
-    
-     
+.bankheader {
+      background-color: #fafbfc; /* Set your desired background color */
+      color: rgb(21, 131, 233); /* Set text color */
+      padding: 20px; /* Adjust padding as needed */
+      text-align: center; /* Center align text */
+  }
+  
+  .bankcontainer {
+      display: flex; /* Use flexbox layout */
+      justify-content: center; /* Center contents horizontally */
+      align-items: center; /* Center contents vertically */
+      padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .bankcontainer img {
+      max-width: 100%; /* Ensure images don't exceed their container */
+      height: auto; /* Maintain aspect ratio */
+      margin: 10px; /* Add margin around images */
+  }
+  
+  .bank2 {
+      margin-left: 20px; /* Add margin between the two images */
+  }
+  

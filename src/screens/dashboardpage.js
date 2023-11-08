@@ -12,7 +12,10 @@ const Dashboard = () => {
     const navigate = useNavigate()
     return (
         <>
-            <Navbar />
+        <div>
+        <Navbar />  
+        </div>
+          
             <div className='dashboardroot'>
 
 

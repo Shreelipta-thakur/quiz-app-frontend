@@ -1,0 +1,27 @@
+.question-bank {
+    position: relative;
+    display: -ms-flexbox;
+   
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-radius: 0.25rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.question p {
+    font-size: 16px;
+}

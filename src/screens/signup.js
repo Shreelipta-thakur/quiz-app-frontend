@@ -30,7 +30,7 @@ export default function Signup() {
               placeholder="Enter you password"
             />
           </div>
-          <button type="submit" onClick={()=>{ navigate("/")}}>Submit</button>
+          <button type="submit" onClick={()=>{ navigate("/student")}}>Submit</button>
           <h2 align="center" class="or">
             
           </h2>

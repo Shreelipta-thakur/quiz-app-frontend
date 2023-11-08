@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./styles.css"
 import loginpic from "../assets/login logo.png"
@@ -6,6 +6,21 @@ import loginpic from "../assets/login logo.png"
 
 const Login = ()=>{
     const navigate  = useNavigate()
+    const [selectedUserType, setSelectedUserType] = useState('');
+
+    const handleSelectChange = (event) => {
+      setSelectedUserType(event.target.value);
+    };
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      if (selectedUserType === 'student') {
+        navigate('/student');
+      } else {
+        navigate('/teacher');
+      }
+    };
+    
     return(
         
         
@@ -17,18 +32,31 @@ const Login = ()=>{
                 <div className="form">
                     <div className="heading">LOGIN</div>
                    
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" placeholder="Enter your name" />
+                            <input type="password" id="password" placeholder="Enter your name" />
                         </div>
                         <div>
                             <label htmlFor="e-mail">E-Mail</label>
                             <input type="email" id="e-mail" placeholder="Enter you mail" />
                         </div>
-                        <button type="submit" onClick={()=>{
-                            navigate("/")
-                        }}>
+                        <div>
+                            <label htmlFor="password">Password</label>
+                            <input type="text" id="password" placeholder="Enter you password" />
+                        </div>
+                        <div>
+  
+      <select id="userType" onChange={handleSelectChange} value={selectedUserType} required>
+     <option value="">selectedUserType</option>
+        <option value="student" >Student</option>
+        <option value="teacher">Teacher</option></select>
+                        </div>
+                        <button type="submit" onClick={handleSubmit}
+                          
+                        >
+                            
+    
                             Submit
                         </button>
                     </form>

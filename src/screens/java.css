@@ -1,0 +1,22 @@
+.question-bank {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #265ad4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-radius: 0.25rem;
+
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    color: #f5f8fb;
+}
+
+.question p {
+    font-size: 16px;
+}
