@@ -2,11 +2,15 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./styles.css"
 import signinpic from "../assets/logoquiz.png"
+import loginpic from "../assets/login logo.png"
 
 export default function Signup() {
     const navigate  = useNavigate()
   return (
     <div className="wrapper signUp">
+       <figure style={{borderRight:"1px solid #424345", width:"45%", height:"80%", justifyContent:"center", alignItems:"center", display:"flex"}}>
+                    <img className="loginImg" src={loginpic} alt="Login pic" />
+                </figure>
       <div className="form">
       <figure>
                     <img src={signinpic} alt="Sign in pic" />

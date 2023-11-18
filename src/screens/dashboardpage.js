@@ -15,30 +15,19 @@ const Dashboard = () => {
         <div>
         <Navbar />  
         </div>
-          
             <div className='dashboardroot'>
-
-
                 <div class="container">
-
-
-
                     <div className="card">
                         <img src={questionbank} alt='' />
                         <button type="submit" onClick={() => {
                             navigate("/bankitem")
-                        }}>questions</button>
+                        }}>Question Bank</button>
                     </div>
                     <div className="card2">
                         <img src={quiz} alt='' /> <button type="submit" onClick={() => {
                             navigate("/questionitem")
-                        }}>start quiz</button>
-
-
-
+                        }}>Start Quiz</button>
                     </div>
-
-
                 </div>
 
                 <Link to="/"></Link>

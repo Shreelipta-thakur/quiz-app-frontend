@@ -6,62 +6,46 @@ import loginpic from "../assets/login logo.png"
 
 const Login = ()=>{
     const navigate  = useNavigate()
-    const [selectedUserType, setSelectedUserType] = useState('');
-
-    const handleSelectChange = (event) => {
-      setSelectedUserType(event.target.value);
-    };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("")
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      if (selectedUserType === 'student') {
-        navigate('/student');
+      if (email === "" || password === "") {
+        alert("Please Enter a valid email and password")
+      } else if (email === "admin@cutm.in" && password === "Admin@123") {
+        navigate('/admin');
       } else {
-        navigate('/teacher');
+        navigate("/student") 
       }
     };
     
     return(
-        
-        
             <div className="wrapper signIn">
-                 <figure>
-                    <img src={loginpic} alt="Login pic" />
+                 <figure style={{borderRight:"1px solid #424345", width:"45%", height:"80%", justifyContent:"center", alignItems:"center", display:"flex"}}>
+                    <img className="loginImg" src={loginpic} alt="Login pic" />
                 
-                    </figure>
+                </figure>
                 <div className="form">
                     <div className="heading">LOGIN</div>
                    
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <label htmlFor="name">Name</label>
-                            <input type="password" id="password" placeholder="Enter your name" />
-                        </div>
-                        <div>
                             <label htmlFor="e-mail">E-Mail</label>
-                            <input type="email" id="e-mail" placeholder="Enter you mail" />
+                            <input type="email" id="e-mail" placeholder="Enter you mail" onChange={(e)=>{setEmail(e.target.value)}} />
                         </div>
                         <div>
                             <label htmlFor="password">Password</label>
-                            <input type="text" id="password" placeholder="Enter you password" />
+                            <input type="password" id="password" placeholder="Enter you password" onChange={(e)=>{setPassword(e.target.value)}}/>
                         </div>
                         <div>
-  
-      <select id="userType" onChange={handleSelectChange} value={selectedUserType} required>
-     <option value="">selectedUserType</option>
-        <option value="student" >Student</option>
-        <option value="teacher">Teacher</option></select>
                         </div>
-                        <button type="submit" onClick={handleSubmit}
-                          
-                        >
-                            
-    
+                        <button type="submit" onClick={handleSubmit}>
                             Submit
                         </button>
                     </form>
                     <p>
-                        Don't have an account ? <Link to="/Signup"> Sign In </Link>
+                        Don't have an account ? <Link to="/Signup"> Sign Up </Link>
                     </p>
                 </div>
                 

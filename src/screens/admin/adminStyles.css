@@ -1,0 +1,72 @@
+.adminRoot{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    
+}
+.navContainer{
+    width: 100vw;
+    height: 80px;
+    top: 0;
+    left: 0; 
+    background-color: rgb(108, 108, 232);
+    border-bottom: 1px solid white; 
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.contentContainer{
+    width: 100%;
+    height: 100vw - 80px;
+    display: flex;
+    /* background-color: red; */
+}
+.sideNav{
+    width: 20%;
+    height: 90vh;
+    background-color: rgb(108, 108, 232);
+    padding: 10px;
+}
+.sideNav .navItem{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+.breadcrumb {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: darkgray;
+
+}
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    /* background-color: yellowgreen; */
+}
+.cardContainer .card {
+    width: 200px;
+    height: 100px;
+    background-color: bisque;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10px; */
+}
+.card:hover {
+    background-color: rgb(250, 209, 158);
+}

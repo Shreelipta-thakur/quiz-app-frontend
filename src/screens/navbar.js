@@ -20,9 +20,9 @@ export default function Navbar() {
           <li><a href="/contact">Contact</a></li>
         </ul>
         <button type="submit" onClick={() => {
-          navigate("/signup")
+          navigate("/login")
         }}>
-          Signup
+          Logout {" "}
           <i class="ri-user-3-fill"></i>
         </button>
       </nav>
